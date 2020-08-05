@@ -25,6 +25,11 @@ variable "location" {
   description = "The Azure region where the resources will be deployed."
 }
 
+variable subnet_id {
+  type = string
+  description = "The ID of the subnet in which nodes will be placed."
+}
+
 
 
 

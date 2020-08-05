@@ -28,6 +28,7 @@ resource "azurerm_kubernetes_cluster" "aksCluster" {
         node_count = var.nodeCount
         vm_size = var.vmSize
         type = "VirtualMachineScaleSets"
+        vnet_subnet_id = var.subnet_id
     }
 
     service_principal {
