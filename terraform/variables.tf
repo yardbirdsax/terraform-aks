@@ -37,6 +37,24 @@ variable service_cidr {
   default = "10.0.0.0/16"
 }
 
+variable pod_cidr {
+  type = string
+  description = "The CIDR range to use for the pod network."
+  default = "10.244.0.0/16"
+}
+
+variable docker_bridge_cidr {
+  type = string
+  description = "The CIDR range to use for the docker bridge network."
+  default = "172.17.0.1/16"
+}
+
+variable dns_service_ip {
+  type = string
+  description = "The IP to use for the DNS service."
+  default = "10.0.0.10"
+}
+
 variable network_plugin {
   type = string
   description = "The name of the network plugin to use."

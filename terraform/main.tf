@@ -43,6 +43,9 @@ resource "azurerm_kubernetes_cluster" "aksCluster" {
     network_profile {
         service_cidr = var.service_cidr
         network_plugin = var.network_plugin
+        dns_service_ip = var.dns_service_ip
+        docker_bridge_cidr = var.docker_bridge_cidr
+        pod_cidr = var.pod_cidr
     }
 }
 
