@@ -39,5 +39,10 @@ resource "azurerm_kubernetes_cluster" "aksCluster" {
     depends_on = [
         azuread_service_principal_password.aksSpPassword
     ]
+
+    network_profile {
+        service_cidr = var.service_cidr
+        network_plugin = var.network_plugin
+    }
 }
 

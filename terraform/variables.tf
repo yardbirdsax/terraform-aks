@@ -28,6 +28,19 @@ variable "location" {
 variable subnet_id {
   type = string
   description = "The ID of the subnet in which nodes will be placed."
+  default = null
+}
+
+variable service_cidr {
+  type = string
+  description = "The CIDR range to use for the service network."
+  default = "10.0.0.0/16"
+}
+
+variable network_plugin {
+  type = string
+  description = "The name of the network plugin to use."
+  default = "kubenet"
 }
 
 
